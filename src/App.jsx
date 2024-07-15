@@ -30,11 +30,13 @@ function Loader() {
   const { progress } = useProgress();
   return (
     <Html center>
-      <h2>{progress} % loaded</h2>{" "}
+      <div style={{ width: "100px" }}>
+        <img class="loader-img" src="./loader.png" alt="loader" />
+        <h3>{progress} % loaded</h3>
+      </div>
     </Html>
   );
 }
-
 
 export default function App() {
   const initialCameraPosition = [0.5, 1, 2];
@@ -77,9 +79,7 @@ export default function App() {
           />
         </Suspense>
       </Canvas>
-      <div
-       className="controls"
-      >
+      <div className="controls">
         <p>Drag and Rotate</p>
         <p>Click on paintings to zoom</p>
         <label for="vehicle1"> Auto rotate </label>
@@ -91,11 +91,7 @@ export default function App() {
           onChange={() => setAutoRotate((autoRotate) => !autoRotate)}
         />
         <p>
-          <button
-            onClick={() => orbitref.current.reset()}
-          >
-            Reset
-          </button>
+          <button onClick={() => orbitref.current.reset()}>Reset</button>
         </p>
       </div>
     </>
