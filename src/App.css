@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.controls {
+  position: absolute;
+  padding: 10px;
+  color: white;
+  top: 0;
+  right: 0;
+  background: #766c6c;
+}
