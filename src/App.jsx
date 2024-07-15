@@ -80,19 +80,22 @@ export default function App() {
         </Suspense>
       </Canvas>
       <div className="controls">
-        <p>Drag and Rotate</p>
-        <p>Click on paintings to zoom</p>
-        <label for="vehicle1"> Auto rotate </label>
+        <div>Drag and Rotate</div>
+        <div>Click on paintings to zoom</div>
+        <label> Auto rotate </label>
         <input
           type="checkbox"
           id="auto-rotate"
           name="Auto Rotate"
+          className="control-btn"
           defaultChecked={autoRotate}
           onChange={() => setAutoRotate((autoRotate) => !autoRotate)}
         />
-        <p>
-          <button onClick={() => orbitref.current.reset()}>Reset</button>
-        </p>
+        <div>
+          <button className="control-btn" onClick={() => orbitref.current.reset()}>Reset</button>
+        </div>
+        <p>Created using React & Threejs</p>
+        <div onClick={()=>window.open('https://priyasonar.netlify.app',  "_blank")}>Click to View My Portfolio</div>
       </div>
     </>
   );

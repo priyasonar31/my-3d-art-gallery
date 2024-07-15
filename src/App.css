@@ -4,9 +4,22 @@
 
 .controls {
   position: absolute;
-  padding: 10px;
+  padding: 5px;
   color: white;
   top: 0;
   right: 0;
   background: #766c6c;
+  opacity: 0.8;
+}
+
+.control-btn {
+  cursor: pointer;
+}
+
+.portfolio {
+  cursor: pointer;
+  font-weight: 600;
+  border: 3px solid;
+  padding: 2px;
+  border-radius: 10px;
 }
